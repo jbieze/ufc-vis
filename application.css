@@ -1,0 +1,54 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ /*@import "reset.scss";*/
+
+  html {
+    background-color: black;
+  }
+
+  p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  select#weight-class, select#fighter-left-select, select#fighter-right-select {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    /*-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    border: 1px solid #AAA;
+    color: #555;
+    font-size: inherit;
+    margin: 20px;
+    overflow: hidden;
+    padding: 5px 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 300px;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }

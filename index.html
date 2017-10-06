@@ -2,10 +2,107 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="faceoff.js"></script>
+    <link rel="stylesheet" href="application.css" type="text/css">
     <title></title>
   </head>
   <body>
-    <p>Hello, world.</p>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+
+    <form>
+      <select id="weight-class" className="weight-class" onChange="">
+        <option value="weight-class" selected="true" disabled="true">Weight Class</option>
+        <option value="men" disabled="true">--- Men ---</option>
+        <option value="flyweight">Flyweight</option>
+        <option value="bantamweight">Bantamweight</option>
+        <option value="featherweight">Featherweight</option>
+        <option value="lightweight">Lightweight</option>
+        <option value="welterweight">Welterweight</option>
+        <option value="middleweight">Middleweight</option>
+        <option value="light-heavyweight">Light Heavyweight</option>
+        <option value="heavyweight">Heavyweight</option>
+        <option value="women" disabled="true">--- Women ---</option>
+        <option value="strawweight">Strawweight</option>
+        <option value="w-bantamweight">Bantamweight</option>
+        <option value="w-featherweight">Featherweight</option>
+      </select>
+    </form>
+
+    <div className="charts-container">
+
+      <div className="fighter-left">
+
+        <form className="fighter-left-form">
+          <select id="fighter-left-select" className="fighter-left-select" onChange="">
+          </select>
+        </form>
+
+        <div className="fighter-left-radar" width="250px" height="250">
+          <canvas id="myRadarChart" width="250px" height="250px"></canvas>
+        </div>
+
+      </div>
+
+      <div className="bar-charts" height="800px">
+
+        <div className="slpm-chart">
+          <p className="chart-label" height="100px">Sig. Strikes Landed per Minute</p>
+          <canvas id="slpmChart" height="100"></canvas>
+        </div>
+
+        <div className="str-acc-chart">
+          <p className="chart-label">Significant Striking Accuracy</p>
+          <canvas id="strAccChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="sapm-chart">
+          <p className="chart-label">Sig. Strikes Absorbed per Minute</p>
+          <canvas id="sapmChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="str-def-chart">
+          <p className="chart-label">Sig. Strike Defense</p>
+          <canvas id="strDefChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="td-avg-chart">
+          <p className="chart-label">Average Takedowns Landed per 15 minutes</p>
+          <canvas id="tdAvgChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="td-acc-chart">
+          <p className="chart-label">Takedown Accuracy</p>
+          <canvas id="tdAccChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="td-def-chart">
+          <p className="chart-label">Takedown Defense</p>
+          <canvas id="tdDefChart" width="400px" height="100px"></canvas>
+        </div>
+
+        <div className="sub-avg-chart">
+          <p className="chart-label">Average Submissions Attempted per 15 Minutes</p>
+          <canvas id="subAvgChart" width="400px" height="100px"></canvas>
+        </div>
+      </div>
+
+      <div className="fighter-right">
+
+        <form clasName="fighter-right-form">
+          <select id="fighter-right-select" className="fighter-right-select" onChange"">
+          </select>
+        </form>
+
+        <div className="fighter-right-rader" width="250px" height"250">
+          <canvas id="myOtherRadarChart" width="250" height="250"></canvas>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="bundle.js"></script>
   </body>
 </html>
