@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "webpack.config.js",
+  "engines": {
+    "node": ">=8.1.0"
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -10,13 +13,20 @@
     "chart.js": "^2.7.0",
     "http-server": "^0.10.0",
     "ufc-api": "^0.2.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "express": "^4.15.3",
+    "node-fetch": "^1.7.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
-    "webpack": "webpack --watch"
+    "build": "webpack --watch",
+    "webpack": "webpack --watch",
+    "start": "nodemon call.js",
+    "start:debug": "DEBUG=* node call.js"
   },
   "repository": {
     "type": "git",

@@ -1,3 +1,10 @@
+// document.addEventListener('DOMContentLoaded', () => {
+//
+//
+//
+//
+// }
+
 window.chart = require('chart.js');
 // import {fetchFighters} from './util/api_util.js'
 // const ctx1 = document.getElementById("myChart");

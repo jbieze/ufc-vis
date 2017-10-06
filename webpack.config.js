@@ -1,4 +1,5 @@
-var path = require("path");
+const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   context: __dirname,
@@ -18,6 +19,9 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.ProgressPlugin()
+  ],
   devtool: 'source-maps',
   resolve: {
     extensions: [".js", ".jsx", "*"]
